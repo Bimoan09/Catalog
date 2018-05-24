@@ -60,7 +60,7 @@
                         <td>{{ $produk->hargadiskon }}</td>
                         <td>{{ $produk->tanggaldibuat }}</td>
                         <td>
-                            <form action="{{ action('ProductController@destroy', $produk->id) }}" method="Delete">
+                            <form action="{{ action('ProductController@destroy', $produk->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
                                 <a href="{{ url('kontak_edit',$produk->id) }}" class=" btn btn-sm btn-primary">Edit</a>

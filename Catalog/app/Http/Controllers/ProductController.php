@@ -129,8 +129,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $product = Product::where('id',$id);
+        $product = Product::find($id);
         $product->delete();
         return redirect()->route('kontak')->with('alert-success','Data berhasi dihapus!');
     }
+
 }

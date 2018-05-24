@@ -18,7 +18,7 @@ Route::get('kontak_create','ProductController@create');
 Route::post('kontak','ProductController@store')->name('kontak.store');
 Route::get('kontak_edit/{id}','ProductController@edit')->name('kontak_edit');
 Route::put('kontak_edit/{id}','ProductController@update')->name('kontak_update');
-Route::delete('kontak','ProductController@destroy')->name('kontak_destroy');
+Route::delete('kontak_destroy/{id}','ProductController@destroy')->name('kontak_destroy');
 
 
 Route::get('/', function () {

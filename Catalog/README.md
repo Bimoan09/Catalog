@@ -1,12 +1,13 @@
 
-Simple Catalog and algoritma
+Simple Catalog 
 
 requirment
 
 * laravel 5.4
+* CkEditor rich Text Editor
 
 
-**NOTE => "you must connect to internet to use this catalog, because i am using CKeditor Rich text editor package is must connect to internet**
+**NOTE => "you must connect to internet to use this catalog, for good experience**
 
 
 instalation

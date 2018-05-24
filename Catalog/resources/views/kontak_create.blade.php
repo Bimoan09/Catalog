@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Anak IT -  Tambah Kontak</h1>
+            <h1>Catalog-  Tambah Barang</h1>
             <hr>
             <form action="{{ route('kontak.store') }}" method="post">
                 {{ csrf_field() }}
@@ -46,13 +46,18 @@
                     <input type="text" class="form-control" id="stock" name="stock" required>
                 </div>
                 <div class="form-group">
-                    <label for="nohp">Harga Normal:</label>
-                    <input type="text" class="form-control" id="harganormal" name="harganormal" required>
-                </div>
-                <div class="form-group">
-                    <label for="nohp">Harga Diskon:</label>
-                    <input type="text" class="form-control" id="hargadiskon" name="hargadiskon" required>
-                </div>
+                <div class="form-row">
+        <label for="c2">Harga Normal</label>
+    <div class="input-group"> 
+        <span class="input-group-addon">Rp</span>
+        <input type="number" min="0" id= "harganormal" name= "harganormal" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" required/>
+    </div>
+    <label for="c2">Harga Diskon</label>
+    <div class="input-group"> 
+        <span class="input-group-addon">Rp</span>
+        <input type="number" min="0" id= "hargadiskon" name= "hargadiskon" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" required/>
+    </div>
+           
                 <div class="form-group">
                     <label for="nohp">Tanggal Pembuatan:</label>
                     <input type="date" class="form-control" id="tanggaldibuat" name="tanggaldibuat" required>

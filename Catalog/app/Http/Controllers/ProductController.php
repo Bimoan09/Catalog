@@ -20,7 +20,7 @@ class ProductController extends Controller
         $query->where('namaproduct', 'like', "%{$request->keyword}%")
             ->orWhere('id', 'like', "%{$request->keyword}%")
             ->orWhere('tanggaldibuat', 'like', "%{$request->keyword}%");
-    })->paginate(10);
+    })->paginate(5);
     $product->appends($request->only('keyword'));
 
     return view('kontak',compact('product'));
@@ -63,7 +63,7 @@ class ProductController extends Controller
         $product->save();
        
         
-        return redirect()->route('kontak')->with('alert-success','Data berhasil diTAMBAH!');
+        return redirect()->route('kontak')->with('alert-success','Produk berhasil ditambah');
     }
 
     /**
@@ -117,7 +117,7 @@ class ProductController extends Controller
         $product->save();
        
 
-        return redirect()->route('kontak')->with('alert-success','Data berhasil diubah!');
+        return redirect()->route('kontak')->with('alert-success','Produk berhasil diupdate!');
     }
 
 
@@ -131,7 +131,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->delete();
-        return redirect()->route('kontak')->with('alert-success','Data berhasi dihapus!');
+        return redirect()->route('kontak')->with('alert-success','Produk berhasil dihapus!');
     }
 
 }

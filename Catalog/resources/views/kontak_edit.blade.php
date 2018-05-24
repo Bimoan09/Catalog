@@ -18,7 +18,7 @@
                 <div class="form-group">
 		                  <label for="content" class="col-sm-2 control-label">Deskripsi</label>
 		                  <div class="col-sm-10">
-		                    <textarea id="descriptionproduct" name="descriptionproduct"  rows="10" cols="80" value="{{ $produk->descriptionproduct }}"></textarea>
+		                    <textarea id="descriptionproduct" name="descriptionproduct"  rows="10" cols="80">{{ $produk->descriptionproduct }}</textarea>
 		                  </div>
 		                </div>
                 <div class="form-group">

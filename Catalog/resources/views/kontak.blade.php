@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Anak IT -  Table Kontak</h1>
+            <h1>List Catalog</h1>
             @if(Session::has('alert-success'))
                 <div class="alert alert-success">
                     <strong>{{ \Illuminate\Support\Facades\Session::get('alert-success') }}</strong>
@@ -16,7 +16,7 @@
                     <div class="row">
                         <form action="{{ url()->current() }}">
                             <div class="col-md-10">
-                                <input type="text" name="keyword" class="form-control" placeholder="Cari nama produk,ID dan Tanggal..." value="{{ request('keyword') }}">
+                                <input type="text" name="keyword" class="form-control" placeholder="Cari berdasarkan Nama Produk,ID dan Tanggal..." value="{{ request('keyword') }}">
                             </div>
                             <div class="col-md-2 text-right">
                                 <button type="submit" class="btn btn-primary">
@@ -26,7 +26,7 @@
                         </form>
                     </div>
             <hr>
-            <table class="table table-bordered table-responsive table-hover">
+            <table class="table table-bordered table-responsive table-hover order-column">
                 <thead>
                 <tr>
              
@@ -56,8 +56,8 @@
                         <td>{{ $produk->warna }}</td>
                         <td>{{ $produk->type }}</td>
                         <td>{{ $produk->stock }}</td>
-                        <td>{{ $produk->harganormal }}</td>
-                        <td>{{ $produk->hargadiskon }}</td>
+                        <td>Rp.{{ $produk->harganormal }}</td>
+                        <td>Rp.{{ $produk->hargadiskon }}</td>
                         <td>{{ $produk->tanggaldibuat }}</td>
                         <td>
                             <form action="{{ action('ProductController@destroy', $produk->id) }}" method="POST">
